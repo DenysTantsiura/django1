@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "django1"
+version = "0.1.0"
+description = ""
+authors = ["Denys Tantsiura <ghost0002501@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+django = "^4.1.7"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.1.1"
+flake8 = "^6.0.0"
+black = {extras = ["d"], version = "^23.1.0"}
+
+[tool.black]
+line-length = 119
+skip-string-normalization = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
