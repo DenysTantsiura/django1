@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'polls',  # зареєструвати застосунок у проекті, щоб інструмент міграцій знав про ці моделі.
 ]
 
 MIDDLEWARE = [
@@ -72,6 +73,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+# налаштування роботи з базою даних:
 
 DATABASES = {
     'default': {

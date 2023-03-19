@@ -14,8 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 
 urlpatterns = [
+    # шлях до створеного застосунку: polls/. Функція include потрібна, щоб повідомити Django, що всі маршрути, 
+    # що починаються з polls/, повинні оброблятися застосунком polls. 
+    # (Сам маршрут втрачає префікс polls (відбудеться заміна polls/ на /) і відправляється для обробки 
+    # вже в сам застосунок.)
+    path('polls/', include('polls.urls')),
+
+    # шлях до адмін-панелі нашого проекту — admin/
     path('admin/', admin.site.urls),
 ]
