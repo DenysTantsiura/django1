@@ -2,6 +2,8 @@ import logging
 # from time import time
 from timeit import default_timer
 
+# export PYTHONPATH="${PYTHONPATH}:/1prj/example_beautifulsoup_and_scrapy/"
+# https://stackoverflow.com/questions/49493675/django-db-utils-programmingerror-relation-auth-user-does-not-exist-django-v
 
 logging.basicConfig(level=logging.DEBUG, format='%(threadName)s %(message)s')
 
