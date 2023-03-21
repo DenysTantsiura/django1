@@ -17,6 +17,12 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    path('polls/', include('polls.urls')),
+    path('admin/', admin.site.urls),
+]
+
+
+'''
     # шлях до створеного застосунку: polls/. Функція include потрібна, щоб повідомити Django, що всі маршрути, 
     # що починаються з polls/, повинні оброблятися застосунком polls. 
     # (Сам маршрут втрачає префікс polls (відбудеться заміна polls/ на /) і відправляється для обробки 
@@ -25,4 +31,4 @@ urlpatterns = [
 
     # шлях до адмін-панелі нашого проекту — admin/
     path('admin/', admin.site.urls),
-]
+'''
