@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
+# export PYTHONPATH="${PYTHONPATH}:/1prj/example_beautifulsoup_and_scrapy/"
 from authentication import get_password
 
 
@@ -23,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(w_#j^4o3jqm%0odl*wt3ret6b8^nb=qbuq-xloh4l45s1+#ve'
+SECRET_KEY = f'django-insecure-{get_password("dsk.txt")}'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
